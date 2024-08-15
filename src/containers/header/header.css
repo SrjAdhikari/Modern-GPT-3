@@ -1,0 +1,160 @@
+.gpt3__header {
+    display: flex;                  /* Aligns children in a row by default */
+}
+
+.gpt3__header-content {
+    display: flex;                  /* Aligns children in a row */
+    flex: 1;                        /* Takes up available space */
+    justify-content: center;        /* Centers content horizontally */
+    align-items: flex-start;        /* Aligns content to the start vertically */
+    flex-direction: column;         /* Arranges children in a column */
+    margin-right: 5rem;             /* Adds margin to the right */
+}
+
+.gpt3__header-content h1 {
+    font-family: var(--font-family);    /* Applies custom font */
+    font-weight: 800;                   /* Makes font bold */
+    font-size: 62px;                    /* Sets font size */
+    line-height: 75px;                  /* Sets line height */
+    letter-spacing: -0.04em;            /* Adjusts spacing between letters */
+}
+
+.gpt3__header-content p {
+    font-family: var(--font-family);    /* Applies custom font */
+    font-weight: 400;                   /* Sets font weight */
+    font-size: 20px;                    /* Sets font size */
+    line-height: 28px;                  /* Sets line height */
+    color: var(--color-text);           /* Sets text color */
+    margin-top: 1.5rem;                 /* Adds top margin */
+}
+
+.gpt3__header-content__input {
+    width: 100%;                        /* Full width */
+    margin: 2rem 0 1rem;                /* Adds margin */
+    display: flex;                      /* Aligns children in a row */
+}
+
+.gpt3__header-content__input input {
+    flex: 2;                            /* Takes up 2/3 of the input container */
+    width: 100%;                        /* Full width */
+    min-height: 50px;                   /* Minimum height */
+    font-family: var(--font-family);    /* Applies custom font */
+    font-size: 20px;                    /* Sets font size */
+    line-height: 27px;                  /* Sets line height */
+    background: var(--color-footer);    /* Sets background color */
+    border: 2px solid var(--color-footer);      /* Sets border color */
+    padding: 0 1rem;                    /* Adds padding */
+    outline: none;                      /* Removes outline */
+    color: #fff;                      /* Sets text color */
+    
+    border-top-right-radius: 5px;       /* Rounds top-right corner */
+    border-bottom-right-radius: 5px;    /* Rounds bottom-right corner */
+}
+
+.gpt3__header-content__input button {
+    flex: 0.6;                          /* Takes up 0.6 of the input container */
+    width: 100%;                        /* Full width */
+    min-height: 50px;                   /* Minimum height */
+    font-family: var(--font-family);    /* Applies custom font */
+    font-weight: bold;                  /* Makes font bold */
+    font-size: 20px;                    /* Sets font size */
+    line-height: 27px;                  /* Sets line height */
+    background: #FF4820;              /* Sets background color */
+    color: #fff;                      /* Sets text color */
+    padding: 0 1rem;                    /* Adds padding */
+    cursor: pointer;                    /* Changes cursor to pointer */
+    outline: none;                      /* Removes outline */
+    border: none;                       /* Removes border */
+
+    border-top-right-radius: 5px;       /* Rounds top-right corner */
+    border-bottom-right-radius: 5px;    /* Rounds bottom-right corner */
+}
+
+.gpt3__header-content__people {
+    width: 100%;                        /* Full width */
+    display: flex;                      /* Aligns children in a row */
+    justify-content: flex-start;        /* Aligns content to the start horizontally */
+    align-items: center;                /* Centers content vertically */
+    margin-top: 2rem;                   /* Adds top margin */
+}
+
+.gpt3__header-content__people img {
+    width: 181.79px;                    /* Sets width */
+    height: 38px;                       /* Sets height */
+}
+
+.gpt3__header-content__people p {
+    margin: 0 0 0 1rem;                 /* Adds margin on left */
+    font-family: var(--font-family);    /* Applies custom font */
+    font-weight: 500;                   /* Sets font weight */
+    font-size: 12px;                    /* Sets font size */
+    line-height: 38px;                  /* Sets line height */
+    color: #fff;                      /* Sets text color */
+    text-align: center;                 /* Centers text */
+}
+
+.gpt3__header-image {
+    flex: 1;                            /* Takes up available space */
+    display: flex;                      /* Aligns children in a row */
+    justify-content: center;            /* Centers content horizontally */
+    align-items: center;                /* Centers content vertically */
+}
+
+.gpt3__header-image img {
+    width: 100%;                        /* Full width */
+    height: 100%;                       /* Full height */
+}
+
+@media screen and (max-width:1050px) {
+    .gpt3__header {
+        flex-direction: column;         /* Stacks children vertically on small screens */
+    }
+
+    .gpt3__header-content {
+        margin: 0 0 3rem;               /* Removes right margin and adds bottom margin */
+    }
+}
+
+@media screen and (max-width: 650px) {
+    .gpt3__header h1 {
+        font-size: 48px;                /* Reduces font size */
+        line-height: 60px;              /* Reduces line height */
+    }
+
+    .gpt3__header p {
+        font-size: 16px;                /* Reduces font size */
+        line-height: 24px;              /* Reduces line height */
+    }
+
+    .gpt3__header-content__people {
+        flex-direction: column;         /* Stacks people section vertically */
+    }
+
+    .gpt3__header-content__people p {
+        margin: 0;                      /* Removes margin */
+    }
+
+    .gpt3__header-content__input input,
+    .gpt3__header-content__input button {
+        font-size: 16px;                /* Reduces font size */
+        line-height: 24px;              /* Reduces line height */
+    }
+}
+
+@media screen and (max-width: 490px) {
+    .gpt3__header h1 {
+        font-size: 36px;                /* Further reduces font size */
+        line-height: 48px;              /* Further reduces line height */
+    }
+
+    .gpt3__header p {
+        font-size: 14px;                /* Further reduces font size */
+        line-height: 24px;              /* Reduces line height */
+    }
+
+    .gpt3__header-content__input input,
+    .gpt3__header-content__input button {
+        font-size: 12px;                /* Further reduces font size */
+        line-height: 16px;              /* Reduces line height */
+    }
+}
