@@ -1,92 +1,137 @@
 .gpt3__navbar {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 2rem 6rem;
+    display: flex;                      /* Align children in a row */
+    justify-content: space-between;     /* Distribute space between items */
+    align-items: center;                /* Center items vertically */
+    padding: 2rem 6rem;                 /* Add padding */
 }
 
-.gpt3__navbarLinks {
-    flex: 1;
-    display: flex;
-    justify-content: flex-start;
-    align-items: center;
+.gpt3__navbar-links {
+    flex: 1;                            /* Allow links container to grow and fill space */
+    display: flex;                      /* Align children in a row */
+    justify-content: flex-start;        /* Align items to the start */
+    align-items: center;                /* Center items vertically */
 }
 
-.gpt3__navbarLinks_logo {
-    margin-right: 2rem;
+.gpt3__navbar-links_logo {
+    margin-right: 2rem;                 /* Add space to the right of the logo */
 }
 
-.gpt3__navbarLinks_logo img {
-    width: 62px;
-    height: 16px;
+.gpt3__navbar-links_logo img {
+    width: 62.56px;                     /* Set logo width */
+    height: 16.02px;                    /* Set logo height */
 }
 
-.gpt3__navbarLinks_container {
-    display: flex;
-    flex-direction: row;
+.gpt3__navbar-links_container {
+    display: flex;                      /* Align links in a row */
+    flex-direction: row;                /* Ensure links are in a row */
 }
 
-.gpt3__navbarSign {
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
+.gpt3__navbar-sign {
+    display: flex;                      /* Align sign elements in a row */
+    justify-content: flex-end;          /* Align items to the end */
+    align-items: center;                /* Center items vertically */
 }
 
-.gpt3__navbarLinks_container p,
-.gpt3__navbarSign p,
-.gpt3__navbarMenu_container p {
-    color: #fff;
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 25px;
-    text-transform: capitalize;
-    margin: 0 1rem;
-    cursor: pointer;
+.gpt3__navbar-links_container p,
+.gpt3__navbar-sign p,
+.gpt3__navbar-menu_container p {
+    color: #fff;                        /* Set text color */
+    font-family: var(--font-family);      /* Use defined font family */
+    font-weight: 500;                     /* Set font weight */
+    font-size: 18px;                      /* Set font size */
+    line-height: 25px;                    /* Set line height */
+    text-transform: capitalize;           /* Capitalize text */
+    margin: 0 1rem;                       /* Add margin to left and right */
+    cursor: pointer;                      /* Change cursor to pointer on hover */
 }
 
-.gpt3__navbarSign button, 
-.gpt3__navbarMenu_container button {
-    padding: 0.5rem 1rem;
-    color: #fff;
-    background: #ff4820;
-    font-family: var(--font-family);
-    font-weight: 500;
-    font-size: 18px;
-    line-height: 25px;
-    border-radius: 5px;
-    border: none;
-    outline: none;
-    cursor: pointer;
+.gpt3__navbar-sign button,
+.gpt3__navbar-menu_container button {
+    padding: 0.5rem 1rem;                   /* Add padding */
+    color: #fff;                          /* Set button text color */
+    background: #FF4820;                  /* Set button background color */
+    font-family: var(--font-family);        /* Use defined font family */
+    font-weight: 500;                       /* Set font weight */
+    font-size: 18px;                        /* Set font size */
+    line-height: 25px;                      /* Set line height */
+    border: none;                           /* Remove border */
+    outline: none;                          /* Remove outline */
+    cursor: pointer;                        /* Change cursor to pointer on hover */
+    border-radius: 5px;                     /* Add rounded corners */
 }
 
-.gpt3__navbarMenu {
-    margin-left: 1rem;
-    display: none;
-    position: relative;
+.gpt3__navbar-menu {
+    margin-left: 1rem;                     /* Add space to the left of the menu */
+    display: none;                         /* Hide menu by default */
+    position: relative;                    /* Set position for absolute positioning of container */
 }
 
-.gpt3__navbarMenu svg {
-    cursor: pointer;
+.gpt3__navbar-menu svg {
+    cursor: pointer;                      /* Change cursor to pointer on hover */
 }
 
-.gpt3__navbarMenu_container {
-    display: flex;
-    justify-content: flex-end;
-    align-items: flex-end;
-    flex-direction: column;
-    text-align: end;
-    background: var(--color-footer);
-    padding: 2rem;
-    position: absolute;
-    top: 40px;
-    right: 0;
-    margin-top: 1rem;
-    min-width: 210px;
-    border-radius: 5px;
-    box-shadow: 0 0 5 rgba(0, 0, 0, 0.2);
+.gpt3__navbar-menu_container {
+    display: flex;                      /* Align children in a column */
+    justify-content: flex-end;          /* Align items to the end */
+    align-items: flex-end;              /* Align items to the end */
+    flex-direction: column;             /* Arrange items in a column */
+    text-align: end;                    /* Align text to the end */
+    background: var(--color-footer);    /* Set background color */
+    padding: 2rem;                      /* Add padding */
+    position: absolute;                 /* Position menu absolutely */
+    right: 0;                           /* Align to the right */
+    top: 40px;                          /* Position below the top */
+    margin-top: 1rem;                   /* Add top margin */
+    min-width: 210px;                   /* Set minimum width */
+    border-radius: 5px;                 /* Add rounded corners */
+    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.2);    /* Add shadow */
 }
 
-.gpt3__navbarMenu_container p {
-    margin: 1rem 0;
+.gpt3__navbar-menu_container p {
+    margin: 1rem 0;    /* Add margin above and below paragraphs */
+}
+
+.gpt3__navbar-menu_container-links-sign {
+    display: none;    /* Hide sign section */
+}
+
+/* Responsive design adjustments */
+@media screen and (max-width: 1050px) {
+    /* Hide links container on smaller screens */
+    .gpt3__navbar-links_container {
+        display: none;        /* Hide links */
+    }
+
+    /* Show menu on smaller screens */
+    .gpt3__navbar-menu {
+        display: flex;        /* Display menu */
+    }
+}
+
+@media screen and (max-width: 700px) {
+    /* Adjust padding for navbar on medium screens */
+    .gpt3__navbar {
+        padding: 2rem 4rem;   /* Reduce padding */
+    }
+}
+
+@media screen and (max-width: 500px) {
+    /* Adjust padding and visibility for navbar on small screens */
+    .gpt3__navbar {
+        padding: 2rem;      /* Further reduce padding */
+    }
+
+    /* Hide sign section on small screens */
+    .gpt3__navbar-sign {
+        display: none;      /* Hide sign section */
+    }
+
+    /* Adjust position and visibility of menu container on small screens */
+    .gpt3__navbar-menu_container {
+        top: 20px;          /* Move menu container up */
+    }
+
+    .gpt3__navbar-menu_container-links-sign {
+        display: block;     /* Show sign section */
+    }
 }
